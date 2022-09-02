@@ -1,0 +1,33 @@
+<app-navigation></app-navigation>
+<div class="container mt-3">
+  <h2>Create New Property</h2>
+  <div class="mb-3">
+    <label  class="form-label">Street</label>
+    <input type="text" class="form-control"  [(ngModel)]="street">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Zipcode</label>
+    <input type="text" class="form-control"  [(ngModel)]="zipcode">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">State</label>
+    <select class="form-control" [(ngModel)]="stateVariable">
+      <option *ngFor="let state of states" >{{state}}</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Bedrooms</label>
+    <input type="number" class="form-control" min="0" [(ngModel)]="bedrooms">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Bathrooms</label>
+    <input type="number" class="form-control"  min="0" [(ngModel)]="bathrooms">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">imgURL</label>
+    <input type="text" class="form-control"  [(ngModel)]="imgUrl">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="handleCreateProperty()">Submit</button>
+</div>
+
+

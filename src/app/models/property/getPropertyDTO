@@ -1,0 +1,11 @@
+import { GetTenantsDTO } from "../tenant/GetTenantsDTO";
+
+export interface GetPropertyDTO {
+    id: number; 
+    street: string; 
+    zipcode: string; 
+    state: string; 
+    bedroomCount: number; 
+    bathroomCount: number;  
+    tenants: GetTenantsDTO[];
+}

@@ -1,0 +1,17 @@
+
+<app-navigation></app-navigation>
+<div class="container d-flex justify-content-center" id="header">
+  <h2>Current Properties Own</h2>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <div class="card" style="width: 18rem;" *ngFor="let property of properties">
+        <img class="card-img-top" src={{property.imgUrl}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{property.street + ", " + property.zipcode + ", " + property.state }}</h5>
+          <p class="card-text">Bedrooms: {{property.bedroomCount}}</p>
+          <p class="card-text">Bedrooms: {{property.bathroomCount}}</p>
+          <a href="#" class="btn btn-primary">Property Details</a>
+        </div>
+      </div>
+</div>
